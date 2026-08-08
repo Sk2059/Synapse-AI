@@ -35,3 +35,4 @@ class UUIDMixin:
 class BaseModel(Base, TimestampMixin, UUIDMixin):
     """Base model for all orm models"""
     __abstract__ = True
+
