@@ -40,3 +40,10 @@ class Conversation(Base):
         "User",
         back_populates="conversations",
     )
+
+    messages = relationship(
+        "Message",
+        back_populates="conversations",
+        cascade="all, delete-orphan",
+        order_by="Message.created_at",
+    )
